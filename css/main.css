@@ -5,6 +5,7 @@
     --secondary: #FFD700;
     --tertary: #FFB347;
     --surface: #FFF5E1;
+    --surface-transparent: #46464643;
     --alter-surface: #FFE4B5;
     --no-surface: #E2D9C5;
     --enfasis: #FFA07A;
@@ -34,6 +35,7 @@
         --secondary: #8B0000;
         --tertary: #FF6347;
         --surface: #121212;
+        --surface-transparent: #9b9b9b43;
         --alter-surface: #1E1E1E;
         --no-surface: #252A26;
         --enfasis: #228B22;
@@ -131,7 +133,7 @@ Navegador
     align-items: center;
     height: var(--nav-height);
     position: sticky;
-    z-index: 30;
+    z-index: 100;
     top: 0;
 
     box-shadow: 0 2px 4px var(--shadow);
@@ -286,6 +288,7 @@ Conocimientos
 
 .know img {
     max-width: 200px;
+    filter: drop-shadow(2px 4px 4px var(--text-color));
 }
 
 .know ul {
@@ -306,16 +309,26 @@ Tools
     flex-wrap: wrap;
     align-items: center;
     position: relative;
+    justify-content: center;
 }
 
 .tools .list-tools {
-    gap: 1rem;
-    width: 50%;
+    gap: 3rem;
+    z-index: 30;
+    position: absolute;
+    display: flex;
+}
+
+.tools .list-tools div{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .tools .list-tools li {
     font-weight: bold;
     font-size: x-large;
+    text-align: center;
     background-color: var(--surface);
     border: 2px solid var(--text-color);
     padding: 1rem 2rem;
@@ -325,11 +338,30 @@ Tools
 
 .tools .images-tools {
     z-index: 10;
-    position: absolute;
+    position: relative;
     flex-wrap: wrap;
-    width: 100%;
+    padding: var(--section-py);
+    gap: 3rem;
+}
+
+.tools .images-tools li {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .tools .images-tools img {
     display: block;
+    height: 30%;
+    filter: brightness(0.5);
+}
+
+.tools .tools-back {
+    z-index: 20;
+    border-radius: var(--section-radius);
+    position: absolute;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-color: var(--surface-transparent);
 }
