@@ -319,7 +319,7 @@ Tools
     display: flex;
 }
 
-.tools .list-tools div{
+.tools .list-tools div {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -365,3 +365,45 @@ Tools
     height: 100%;
     background-color: var(--surface-transparent);
 }
+
+/*
+############
+Conocimientos plus
+############
+*/
+.plus ul {
+    border-radius: var(--section-radius);
+    padding: 2rem;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: var(--no-surface);
+}
+
+.plus ul li {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-radius: var(--section-radius);
+}
+
+.plus ul li:has(p:not(:empty):hover) {
+    background-color: var(--surface-transparent);
+}
+
+.plus ul li p {
+    flex: 1;
+    padding: var(--section-py) 0;
+}
+
+.plus ul li p:not(:empty) {
+    border: 1px solid var(--text-color);
+    background-color: var(--alter-text-color);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/*
+############
+Modelado y diagrmas
+############
+*/
