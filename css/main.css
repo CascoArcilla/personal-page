@@ -429,21 +429,14 @@ Modelado y diagrmas
     width: 100%;
 }
 
-@media (width <= 770px) {
-    .wrap-uml {
-        position: relative;
-    }
-
-    .wrap-uml ul {
-        z-index: 30;
-    }
-
-    .wrap-uml aside {
-        position: absolute;
-        z-index: 10;
-        width: 100%;
-        height: 80%;
-    }
+.back-diagram {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--surface-transparent);
+    z-index: 20;
+    border-radius: var(--section-radius);
 }
 
 .wrap-uml ul {
@@ -462,11 +455,59 @@ Modelado y diagrmas
 }
 
 .wrap-uml aside {
-    background-image: url("../assets/imgs/uml.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 50%;
+    animation: diagramsUlm 12s infinite cubic-bezier(0, 1.35, 0.4, 1.12);
+    border-radius: var(--section-radius);
+}
+
+@keyframes diagramsUlm {
+    0% {
+        background-image: url("../assets/imgs/uml.png");
+    }
+
+    25% {
+        background-image: url("../assets/imgs/ER.jpg");
+    }
+
+    50% {
+        background-image: url("../assets/imgs/class.jpg");
+    }
+
+    75% {
+        background-image: url("../assets/imgs/cu.webp");
+    }
+
+    100% {
+        background-image: url("../assets/imgs/uml.png");
+    }
+}
+
+@media (width <=770px) {
+    .wrap-uml {
+        position: relative;
+        padding-top: 0;
+        padding-bottom: 0;
+        align-items: center;
+    }
+
+    .back-diagram {
+        display: block;
+    }
+
+    .wrap-uml ul {
+        z-index: 30;
+        padding: var(--section-py) 0;
+    }
+
+    .wrap-uml aside {
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /*
