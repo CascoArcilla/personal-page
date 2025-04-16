@@ -228,6 +228,13 @@ Informacion basica
     box-shadow: 0 4px 6px var(--shadow);
 }
 
+@media (width <=770px) {
+    .my-name {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
 /*
 ------------------
 Sobre mi
