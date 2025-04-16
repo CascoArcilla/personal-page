@@ -10,20 +10,21 @@
 
 <body>
   <nav class="nav-ul">
-    <a href="#basic-info">Sobre mi</a>
+    <button onclick="movePageTo('inicio')">Inicio</button>
+    <button onclick="movePageTo('basic-info')">Sobre mi</button>
     <div class="wrap-dropdown">
-      <a href="#knowledge">Conocimientos</a>
+      <button onclick="movePageTo('knowledge')">Conocimientos</button>
       <div class="dropdown">
-        <a href="#languajes">Lenguajes de programación</a>
-        <a href="#sgbds-use">SGBDS usados</a>
-        <a href="#developer-web">Desarrollo web</a>
-        <a href="#tools">Herramienas</a>
-        <a href="#plus">Otros</a>
-        <a href="#uml">Modelado UML</a>
+        <button onclick="movePageTo('languajes')">Lenguajes de programación</button>
+        <button onclick="movePageTo('sgbds-use')">SGBDS usados</button>
+        <button onclick="movePageTo('developer-web')">Desarrollo web</button>
+        <button onclick="movePageTo('tools')">Herramienas</button>
+        <button onclick="movePageTo('plus')">Otros</button>
+        <button onclick="movePageTo('uml')">Modelado UML</button>
       </div>
     </div>
-    <a href="#exp">Experiencia</a>
-    <a href="#projects">Proyectos</a>
+    <button onclick="movePageTo('exp')">Experiencia</button>
+    <button onclick="movePageTo('projects')">Proyectos</button>
   </nav>
 
   <main>
@@ -39,13 +40,14 @@
     <section class="my-name">
       <article class="center">
         <p style="font-size: xx-large;">Mi nombre es</p>
-        <h2>Norberto Montalvo Garcia</h2>
+        <h2>Norberto Montalvo García</h2>
       </article>
       <article class="center">
         <img class="photo" src="https://avatars.githubusercontent.com/u/120123220?v=4"
           alt="rostro de norberto montalvo garcia">
       </article>
     </section>
+
     <section id="basic-info" class="about-me">
       <div class="wrap-info">
         <header>
@@ -299,10 +301,40 @@
     <!-- Expreciencia       -->
     <!-- ------------------ -->
     <!-- ------------------ -->
-    <section id="exp">
+    <section id="exp" class="expe">
       <header>
         <h2>Experiencia</h2>
       </header>
+      <article>
+        <header>
+          <h3>
+            Pensemos Web, desarrollo FrondEnd:
+          </h3>
+          <p>
+            Aproximadamente de Marzo 2023 a Octubre 2023
+          </p>
+        </header>
+        <p class="info">
+          La experiencia obtenida fue el desarrollo deproyectosFrondEnd
+          usando la metodología ágil Scrum, uso de Jira para gestar el proyecto,
+          trabajar en equipo y usar Slack para la comunicación. Usar Git,
+          Github y Bitbucket para controlar las versiones de los sitios web.
+        </p>
+      </article>
+
+      <article>
+        <header>
+          <h3>
+            Innova TecNM 2024
+          </h3>
+        </header>
+        <p class="info">
+          Me desempeñe como estudiante líder en el certamen de proyectos hasta
+          la etapa regional, en el aplique los conocimientos sobre desarrollo web
+          con el objetivo de crear una PWA para el registro de glucosa usando
+          React, Bootstrap entre otras librerías.
+        </p>
+      </article>
     </section>
 
     <!-- ------------------ -->

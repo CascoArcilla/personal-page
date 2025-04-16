@@ -144,7 +144,8 @@ nav:hover {
     box-shadow: 0 6px 10px var(--shadow);
 }
 
-.nav-ul a {
+.nav-ul a,
+button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,7 +158,13 @@ nav:hover {
     border-radius: 10px;
 }
 
-.nav-ul a:hover {
+.nav-ul button {
+    background-color: #00000000;
+    border: none;
+}
+
+.nav-ul a:hover,
+button:hover {
     background: var(--primary);
 }
 
@@ -172,12 +179,14 @@ nav:hover {
     border-bottom: 2px solid var(--text-color);
 }
 
-.dropdown a:hover {
+.dropdown a:hover,
+button:hover {
     background: var(--primary);
 }
 
 .wrap-dropdown:hover .dropdown {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 /*
@@ -437,4 +446,33 @@ Modelado y diagrmas
     background-repeat: no-repeat;
     background-position: center;
     width: 50%;
+}
+
+/*
+------------------
+Experiencia
+------------------
+*/
+.expe {
+    border-radius: var(--section-radius);
+    border-left: 3px solid var(--text-color);
+    border-right: 3px solid var(--text-color);
+}
+
+.expe article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.expe article:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.expe article header {
+    margin-bottom: 1rem;
+}
+
+.expe article .info {
+    width: 60%;
 }
