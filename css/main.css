@@ -25,6 +25,9 @@
     --article-py: 1rem;
 
     --shadow: rgba(0, 0, 0, 0.1);
+
+    --width-screnn-laptop: 1024px;
+    --width-screnn-tablet: 770px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -332,10 +335,18 @@ Tools
     display: flex;
 }
 
-.tools .list-tools div {
+.tools .list-tools .laptop {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.tools .list-tools .phone {
+    display: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 var(--section-px);
 }
 
 .tools .list-tools li {
@@ -379,6 +390,22 @@ Tools
     background-color: var(--surface-transparent);
 }
 
+@media (width <=1024px) {
+    .tools .list-tools .phone {
+        display: flex;
+    }
+
+    .tools .list-tools .laptop {
+        display: none;
+    }
+}
+
+@media (width <=770px) {
+    .tools .images-tools img {
+        height: 25%;
+    }
+}
+
 /*
 ############
 Conocimientos plus
@@ -397,10 +424,39 @@ Conocimientos plus
     flex-direction: row;
     width: 100%;
     border-radius: var(--section-radius);
+    animation: plus-scale 6s infinite;
 }
 
-.plus ul li:has(p:not(:empty):hover) {
-    background-color: var(--surface-transparent);
+@keyframes plus-scale {
+
+    0%,
+    100% {
+        background: none;
+    }
+
+    25% {
+        background-color: var(--tertary);
+    }
+
+    50% {
+        background: none;
+    }
+}
+
+.plus ul li:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.plus ul li:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.plus ul li:nth-child(3) {
+    animation-delay: 3s;
+}
+
+.plus ul li:nth-child(4) {
+    animation-delay: 4.5s;
 }
 
 .plus ul li p {
@@ -413,6 +469,25 @@ Conocimientos plus
     background-color: var(--alter-text-color);
     padding: 1rem;
     border-radius: 1rem;
+}
+
+@media (width <=770px) {
+    .plus ul li:nth-child(odd) {
+        justify-content: flex-start;
+    }
+
+    .plus ul li:nth-child(even) {
+        justify-content: flex-end;
+    }
+
+    .plus ul li p:empty {
+        display: none;
+    }
+
+    .plus ul li p {
+        width: 70%;
+        flex: none;
+    }
 }
 
 /*
