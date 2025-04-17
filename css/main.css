@@ -50,6 +50,33 @@
     }
 }
 
+@media (width <=770px) {
+    :root {
+        --section-px: 0rem;
+        --section-py: 2rem;
+
+        --section-mx: 1.5rem;
+        --section-my: 3rem;
+
+        --section-radius: 20px;
+        --article-py: 1rem;
+    }
+}
+
+@media (width <=690px) {
+    :root {
+        --section-px: 1rem;
+        --section-py: 2rem;
+
+        --section-mx: 0;
+        --section-my: 3rem;
+
+        --section-radius: 20px;
+        --article-py: 1rem;
+    }
+}
+
+@media (width <=425px) {}
 
 * {
     margin: 0;
@@ -192,6 +219,12 @@ button:hover {
     flex-direction: column;
 }
 
+@media (width <=690px) {
+    .nav-ul {
+        display: none;
+    }
+}
+
 /*
 ------------------
 Informacion basica
@@ -252,13 +285,6 @@ Sobre mi
     text-align: center;
 }
 
-@media (width < 1024px) {
-    .about-me {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 .about-me h2 {
     text-align: center;
 }
@@ -284,6 +310,19 @@ Sobre mi
 @media (prefers-color-scheme: dark) {
     .about-me img {
         filter: invert(1);
+    }
+}
+
+@media (width < 1024px) {
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (width <=690px) {
+    .about-me {
+        border: none;
     }
 }
 
@@ -619,4 +658,10 @@ Experiencia
 
 .expe article .info {
     width: 60%;
+}
+
+@media (width <=690px) {
+    .expe {
+        border: none;
+    }
 }
