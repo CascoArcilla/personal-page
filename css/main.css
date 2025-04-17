@@ -105,6 +105,7 @@ body {
     flex-direction: column;
     align-items: center;
     background: var(--alter-text-color);
+    position: relative;
 }
 
 main {
@@ -159,6 +160,20 @@ section {
 
 article {
     padding: var(--article-py) var(--article-px);
+}
+
+.wrap-up {
+    position: fixed;
+    z-index: 50;
+    right: 0vw;
+    bottom: 0vh;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    display: none;
+}
+
+.btn-up {
+    width: 60px;
 }
 
 @media (width <=770px) {
@@ -221,6 +236,10 @@ article {
 
     img {
         width: 125px;
+    }
+
+    .wrap-up {
+        display: block;
     }
 }
 
