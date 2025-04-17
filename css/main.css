@@ -76,7 +76,18 @@
     }
 }
 
-@media (width <=425px) {}
+@media (width <=425px) {
+    :root {
+        --section-px: 0;
+        --section-py: 2rem;
+
+        --section-mx: 0;
+        --section-my: 3rem;
+
+        --section-radius: 10px;
+        --article-py: 1rem;
+    }
+}
 
 * {
     margin: 0;
@@ -146,6 +157,64 @@ section {
 
 article {
     padding: var(--article-py) var(--article-px);
+}
+
+@media (width <=770px) {
+    img {
+        width: 200px;
+    }
+}
+
+@media (width <=690px) {
+    h1 {
+        font-size: 3.5rem;
+        padding: var(--section-py) var(--section-px);
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p,
+    li,
+    a {
+        font-size: medium
+    }
+
+    img {
+        width: 125px;
+    }
+}
+
+@media (width <=425px) {
+    h1 {
+        font-size: 3rem;
+        padding: var(--section-py) var(--section-px);
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p,
+    li,
+    a {
+        font-size: medium
+    }
+
+    img {
+        width: 125px;
+    }
 }
 
 /*
@@ -293,11 +362,6 @@ Sobre mi
     width: auto;
 }
 
-.about-me .wrap-info article p {
-    margin-bottom: 1rem;
-    font-size: larger;
-}
-
 .about-me .wrap-info article p:last-child {
     margin-bottom: 0;
 }
@@ -323,6 +387,17 @@ Sobre mi
 @media (width <=690px) {
     .about-me {
         border: none;
+        gap: 2rem;
+    }
+}
+
+@media (width <=425px) {
+    .about-me {
+        gap: 0;
+    }
+
+    .about-me img {
+        width: 100%;
     }
 }
 
@@ -422,7 +497,6 @@ Tools
 
 .tools .images-tools img {
     display: block;
-    height: 30%;
     filter: brightness(0.5);
 }
 
@@ -448,7 +522,20 @@ Tools
 
 @media (width <=770px) {
     .tools .images-tools img {
-        height: 25%;
+        width: 150px;
+    }
+}
+
+@media (width <=690px) {
+    .tools .list-tools li {
+        font-size: large;
+    }
+}
+
+@media (width <=425px) {
+    .tools .images-tools img {
+        height: 120px;
+        width: auto;
     }
 }
 
@@ -507,6 +594,8 @@ Conocimientos plus
 
 .plus ul li p {
     flex: 1;
+    font-size: x-large;
+    font-weight: bold;
     padding: var(--section-py) 0;
 }
 
@@ -533,6 +622,12 @@ Conocimientos plus
     .plus ul li p {
         width: 70%;
         flex: none;
+    }
+}
+
+@media (width <=690px) {
+    .plus ul li p {
+        font-size: large;
     }
 }
 
@@ -569,6 +664,9 @@ Modelado y diagrmas
     background-color: var(--alter-text-color);
     padding: 1rem;
     border-radius: 1rem;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
 }
 
 .wrap-uml ul li:not(:last-child) {
